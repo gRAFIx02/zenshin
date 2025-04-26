@@ -14,6 +14,6 @@ The project is based on my favourite game **Genshin Impact**. The project fetche
 
 Use ``npm i`` to install the necessary modules.
 
-If you want to install the updated packages at once, use the following commands:
+If you want to install the updated packages separately without the aforementioned command, use the following commands:
 ``npm init -y``
 ``npm i express ejs axios``
