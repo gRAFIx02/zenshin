@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenShin</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="background-blur">
+        <h1>Generate a Random Genshin Impact Character</h1>
+
+        <div class="container">
+            <% if(locals.name && locals.type && locals.weapon && locals.region) { %>
+                <div class="card">
+                    <img src="images/<%= name %>.png" alt="Character image">
+                </div>
+                <div class="info">
+                    <table>
+                        <tr>
+                            <td><strong>Name </strong></td>
+                            <td> : </td>
+                            <% if(name === "Traveller (male)") {%>
+                                <td id="val">Aether</td>
+                            <% } else if(name === "Traveller (female)") {%>
+                                <td id="val">Lumine</td>
+                            <% } else {%>
+                                <td id="val"><%= name %></td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <td><strong>Element </strong></td>
+                            <td> : </td>
+                            <td id="val"><%= type %></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weapon </strong></td>
+                            <td> : </td>
+                            <td id="val"><%= weapon %></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Region </strong></td>
+                            <td> : </td>
+                            <td id="val"><%= region %></td>
+                        </tr>
+                    </table>
+                </div>
+            <% } else if(locals.error) {%>
+                <div class="error">
+                    <p><%= locals.error %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@font-face 
+{
+    font-family: "Hanyi WenHei 85W Customized";
+    src: url('../fonts/Hanyi_WenHei_85W_Customized.ttf');
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Hanyi WenHei 85W Customized", sans-serif;
+    background: url('../images/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.background-blur
+{
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(7px);
+}
+
+h1
+{
+    width: 100%;
+    padding: 30px;
+    margin: 0;
+    backdrop-filter: invert(0.1);
+}
+
+.container
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.card
+{
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid #4d4d4d;
+    border-radius: 10px;
+}
+
+.card img
+{
+    width: 100%;
+    backdrop-filter: invert(0.1);
+}
+
+.info
+{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#val
+{
+    padding-left: 30px;
+}
